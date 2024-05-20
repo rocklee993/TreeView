@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TreeView.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TreeView.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TreeView.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TreeView.props",
+      "PackagePath": "build\\TreeView.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TreeView.props",
+      "PackagePath": "buildMultiTargeting\\TreeView.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TreeView.props",
+      "PackagePath": "buildTransitive\\TreeView.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
