@@ -1,0 +1,24 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Full Path</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Items)
+        {
+            <tr>
+                <td>@item.LinkText</td>
+                <td>@(item.IsFolder ? "Folder" : "File")</td>
+                <td>@item.FullPath</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    [Parameter]
+    public List<TreeNodeViewModel> Items { get; set; } = new();
+}

@@ -1,0 +1,54 @@
+/* General styling for tree nodes */
+.treeview-node[b-kphp6yiqiw] {
+    cursor: pointer;
+    width: 80%;
+    font-size: 16px;
+    list-style-type: none;
+    margin: 0.5em auto; /* Center-align nodes */
+    padding: 0.5em 1em; /* Adjust padding for a more compact look */
+    font-family: 'Cantarell', 'Liberation Sans', 'DejaVu Sans', sans-serif; /* Common Linux fonts */
+    background-color: #f9f9f9; /* Very light gray background */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    
+}
+
+/* Styling for the root node */
+.treeview-root-node[b-kphp6yiqiw] {
+    border: 1px solid #d0d0d0; /* Light gray border */
+    border-radius: 4px;
+}
+
+/* Styling for selected nodes */
+.treeview-node.node-selected[b-kphp6yiqiw] {
+    background-color: #007acc; /* Blue background for selected nodes */
+    color: #ffffff; /* White text color */
+    border-color: #005ea3; /* Darker blue border */
+}
+
+/* Styling for expanded nodes */
+.treeview-node .toggle-icon[b-kphp6yiqiw] {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+/* Hover effect */
+
+
+/* Background color for the whole page */
+body[b-kphp6yiqiw] {
+    background-color: #f5f5f5; /* Light gray background for the page */
+    color: #333333; /* Dark gray text for readability */
+    font-family: 'Cantarell', 'Liberation Sans', 'DejaVu Sans', sans-serif; /* Common Linux fonts */
+}
+
+/* Tree node list styling */
+ul[b-kphp6yiqiw] {
+    padding-left: 1.5em; /* Indentation for nested lists */
+}
+
+/* Remove default list styling */
+ul[b-kphp6yiqiw], li[b-kphp6yiqiw] {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

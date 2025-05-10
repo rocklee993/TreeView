@@ -1,0 +1,17 @@
+
+
+.table[b-0nzsq89nf9] {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.table th[b-0nzsq89nf9], .table td[b-0nzsq89nf9] {
+    padding: 12px;
+    border: 1px solid #1c27b6;
+    text-align: left;
+}
+
+.table thead[b-0nzsq89nf9] {
+    background-color: #f2f2f2;
+}

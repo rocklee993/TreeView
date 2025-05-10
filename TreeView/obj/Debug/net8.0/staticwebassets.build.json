@@ -1,28 +1,28 @@
 {
   "Version": 1,
-  "Hash": "K4G6JlgjELZyxr2AlQ5AqEbLCw/IkfebsAzbvlyvVnU=",
-  "Source": "TreeView",
-  "BasePath": "_content/TreeView",
+  "Hash": "6jGQndKz4tVb7dolXvm1r/ngOwmVkvqTuLbHHJC+85Y=",
+  "Source": "RecursiveTreeViewExample",
+  "BasePath": "_content/RecursiveTreeViewExample",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "TreeView\\wwwroot",
-      "Source": "TreeView",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\",
-      "BasePath": "_content/TreeView",
+      "Name": "RecursiveTreeViewExample\\wwwroot",
+      "Source": "RecursiveTreeViewExample",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TreeView.styles.css",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RecursiveTreeViewExample.styles.css",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/TreeView",
-      "RelativePath": "TreeView.styles.css",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
+      "RelativePath": "RecursiveTreeViewExample.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TreeView.styles.css"
+      "OriginalItemSpec": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RecursiveTreeViewExample.styles.css"
     },
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TreeView.bundle.scp.css",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RecursiveTreeViewExample.bundle.scp.css",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/TreeView",
-      "RelativePath": "TreeView.bundle.scp.css",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
+      "RelativePath": "RecursiveTreeViewExample.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,14 +52,14 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TreeView.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RecursiveTreeViewExample.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\app.css",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\app.css",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\",
-      "BasePath": "_content/TreeView",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
       "RelativePath": "app.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\images\\img1.svg",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\",
-      "BasePath": "_content/TreeView",
-      "RelativePath": "bootstrap/bootstrap.min.css",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
+      "RelativePath": "images/img1.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\images\\img1.svg"
     },
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\images\\img2.svg",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\",
-      "BasePath": "_content/TreeView",
-      "RelativePath": "bootstrap/bootstrap.min.css.map",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
+      "RelativePath": "images/img2.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\images\\img2.svg"
     },
     {
-      "Identity": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\favicon.png",
-      "SourceId": "TreeView",
+      "Identity": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\images\\img3.svg",
+      "SourceId": "RecursiveTreeViewExample",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VMI\\Documents\\GitHub\\StageL3\\TreeView\\TreeView\\wwwroot\\",
-      "BasePath": "_content/TreeView",
-      "RelativePath": "favicon.png",
+      "ContentRoot": "C:\\Users\\VMI\\Downloads\\BlazorExpandableTreeView-master\\BlazorExpandableTreeView-master\\RecursiveTreeViewExample\\wwwroot\\",
+      "BasePath": "_content/RecursiveTreeViewExample",
+      "RelativePath": "images/img3.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot\\images\\img3.svg"
     }
   ]
 }

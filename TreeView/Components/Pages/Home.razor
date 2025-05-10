@@ -1,7 +1,94 @@
 ﻿@page "/"
+@using RecursiveTreeViewExample.Components.Recursion
+@using System.IO
+@using System.Collections.Generic
 
-<PageTitle>TreeView Component</PageTitle>
+<PageTitle>OnDemand TreeView Component</PageTitle>
 
-<h1>Hello, world!</h1>
+@if (_isLoading)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <TreeView TreeNode="_rootNode" OnChildNodeClicked="ChildNodeSelected" AdditionalClasses="treeview-root-node" />
+    <button @onclick="GetCheckedPaths" style="display: block; margin: 0 auto;">Get Checked Paths</button>
+    @if (checkedItems.Count > 0)
+    {
+        <h3>Checked Items:</h3>
+        <CheckedItemDisplay Items="checkedItems" />
+    }
+}
 
-Welcome to your new app.
+@code {
+    private TreeNodeViewModel _rootNode = new();
+    private string _selectedNodeText = string.Empty;
+    private bool _isLoading = true;
+    private List<TreeNodeViewModel> checkedItems = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await BindTreeAsync();
+    }
+
+    private async Task BindTreeAsync()
+    {
+        _isLoading = true;
+        try
+        {
+            string rootPath = "C:/"; // Change this to your desired path
+            _rootNode = await Task.Run(() => GetDirectoryStructure(rootPath));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            Console.WriteLine($"Unauthorized Access Exception: {ex.Message}");
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    private TreeNodeViewModel GetDirectoryStructure(string path)
+    {
+        var rootDirectoryInfo = new DirectoryInfo(path);
+        return CreateDirectoryNode(rootDirectoryInfo);
+    }
+
+    private TreeNodeViewModel CreateDirectoryNode(DirectoryInfo directoryInfo)
+    {
+        var directoryNode = new TreeNodeViewModel
+        {
+            TreeNodeId = directoryInfo.FullName.GetHashCode(),
+            LinkText = directoryInfo.Name,
+            IsFolder = true,
+            FullPath = directoryInfo.FullName // Store the full path for on-demand loading
+        };
+
+        return directoryNode;
+    }
+
+    private void ChildNodeSelected(TreeNodeViewModel node)
+    {
+        _selectedNodeText = node.LinkText;
+    }
+
+    private void GetCheckedPaths()
+    {
+        checkedItems.Clear();
+        CollectCheckedPaths(_rootNode);
+    }
+
+    private void CollectCheckedPaths(TreeNodeViewModel node)
+    {
+        if (node.IsChecked)
+        {
+            checkedItems.Add(node);
+        }
+
+        foreach (var child in node.Nodes)
+        {
+            CollectCheckedPaths(child);
+        }
+    }
+}

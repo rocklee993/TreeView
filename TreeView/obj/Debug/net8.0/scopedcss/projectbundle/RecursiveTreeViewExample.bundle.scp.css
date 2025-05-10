@@ -1,0 +1,93 @@
+/* _content/RecursiveTreeViewExample/Components/Layout/MainLayout.razor.rz.scp.css */
+#blazor-error-ui[b-hr82wdec3d] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-hr82wdec3d] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+   
+/* _content/RecursiveTreeViewExample/Components/Recursion/CheckedItemDisplay.razor.rz.scp.css */
+
+
+.table[b-0nzsq89nf9] {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.table th[b-0nzsq89nf9], .table td[b-0nzsq89nf9] {
+    padding: 12px;
+    border: 1px solid #1c27b6;
+    text-align: left;
+}
+
+.table thead[b-0nzsq89nf9] {
+    background-color: #f2f2f2;
+}
+/* _content/RecursiveTreeViewExample/Components/Recursion/TreeView.razor.rz.scp.css */
+/* General styling for tree nodes */
+.treeview-node[b-kphp6yiqiw] {
+    cursor: pointer;
+    width: 80%;
+    font-size: 16px;
+    list-style-type: none;
+    margin: 0.5em auto; /* Center-align nodes */
+    padding: 0.5em 1em; /* Adjust padding for a more compact look */
+    font-family: 'Cantarell', 'Liberation Sans', 'DejaVu Sans', sans-serif; /* Common Linux fonts */
+    background-color: #f9f9f9; /* Very light gray background */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    
+}
+
+/* Styling for the root node */
+.treeview-root-node[b-kphp6yiqiw] {
+    border: 1px solid #d0d0d0; /* Light gray border */
+    border-radius: 4px;
+}
+
+/* Styling for selected nodes */
+.treeview-node.node-selected[b-kphp6yiqiw] {
+    background-color: #007acc; /* Blue background for selected nodes */
+    color: #ffffff; /* White text color */
+    border-color: #005ea3; /* Darker blue border */
+}
+
+/* Styling for expanded nodes */
+.treeview-node .toggle-icon[b-kphp6yiqiw] {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+/* Hover effect */
+
+
+/* Background color for the whole page */
+body[b-kphp6yiqiw] {
+    background-color: #f5f5f5; /* Light gray background for the page */
+    color: #333333; /* Dark gray text for readability */
+    font-family: 'Cantarell', 'Liberation Sans', 'DejaVu Sans', sans-serif; /* Common Linux fonts */
+}
+
+/* Tree node list styling */
+ul[b-kphp6yiqiw] {
+    padding-left: 1.5em; /* Indentation for nested lists */
+}
+
+/* Remove default list styling */
+ul[b-kphp6yiqiw], li[b-kphp6yiqiw] {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

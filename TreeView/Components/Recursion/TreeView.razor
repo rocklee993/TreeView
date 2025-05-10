@@ -1,0 +1,151 @@
+﻿@using System.Diagnostics
+<ul class="@(string.IsNullOrEmpty(AdditionalClasses) ? "" : AdditionalClasses)">
+    <li class="treeview-node @(TreeNode.IsExpanded ? "expanded" : "")">
+        <input type="checkbox" @bind="TreeNode.IsChecked" />
+        <a @onclick="() => OnCurrentNodeClicked(TreeNode)">
+            @if (!string.IsNullOrEmpty(DisplayIcon()))
+            {
+                <span class="toggle-icon">@DisplayIcon()</span>
+            }
+            <img src="@GetFolderIconUrl()" alt="Folder Icon" />
+            @TreeNode.LinkText
+        </a>
+
+        @if (TreeNode.IsFolder)
+        {
+            @if (_isExpanded && !_areChildNodesLoaded)
+            {
+                <span style="margin-left: 20px;">Loading...</span>
+            }
+
+            @if (_isExpanded && _areChildNodesLoaded)
+            {
+                <ul>
+                    @foreach (TreeNodeViewModel childNode in TreeNode.Nodes)
+                    {
+                        <TreeView TreeNode="childNode" OnChildNodeClicked="ChildNodeClicked" />
+                    }
+                </ul>
+            }
+        }
+    </li>
+</ul>
+
+@code {
+    [Parameter]
+    public TreeNodeViewModel TreeNode { get; set; } = new TreeNodeViewModel();
+
+    [Parameter]
+    public EventCallback<TreeNodeViewModel> OnChildNodeClicked { get; set; }
+
+    [Parameter]
+    public string AdditionalClasses { get; set; } = "";
+
+    private bool _isExpanded;
+
+    private bool _areChildNodesLoaded => TreeNode.IsLoaded;
+
+    private async Task OnCurrentNodeClicked(TreeNodeViewModel node)
+    {
+        Debug.WriteLine($"[OnCurrentNodeClicked] - {TreeNode.LinkText} says 'You clicked on '{node.LinkText}");
+
+        _isExpanded = !_isExpanded;
+
+        if (_isExpanded && !TreeNode.IsLoaded)
+        {
+            await LoadChildNodesAsync();
+        }
+    }
+
+    private async Task LoadChildNodesAsync()
+    {
+        try
+        {
+            await Task.Delay(500);
+
+            TreeNode.Nodes = GetDirectoryNodes(TreeNode.FullPath);
+            TreeNode.IsLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error loading child nodes: {ex.Message}");
+        }
+
+        StateHasChanged(); // Notify component to re-render
+    }
+
+    private List<TreeNodeViewModel> GetDirectoryNodes(string path)
+    {
+        var directoryInfo = new DirectoryInfo(path);
+        var nodes = new List<TreeNodeViewModel>();
+
+        foreach (var directory in directoryInfo.GetDirectories())
+        {
+            nodes.Add(new TreeNodeViewModel
+            {
+                TreeNodeId = directory.FullName.GetHashCode(),
+                LinkText = directory.Name,
+                IsFolder = true,
+                FullPath = directory.FullName
+            });
+        }
+
+        foreach (var file in directoryInfo.GetFiles())
+        {
+            nodes.Add(new TreeNodeViewModel
+            {
+                TreeNodeId = file.FullName.GetHashCode(),
+                LinkText = file.Name,
+                IsFolder = false,
+                FullPath = file.FullName
+            });
+        }
+
+        return nodes;
+    }
+
+    private void ChildNodeClicked(TreeNodeViewModel childNode)
+    {
+        Debug.WriteLine($"[ChildNodeClicked] - {TreeNode.LinkText} says 'You clicked on '{childNode.LinkText}");
+        OnChildNodeClicked.InvokeAsync(childNode);
+    }
+
+    private string DisplayIcon()
+    {
+        if (!TreeNode.IsLoaded && TreeNode.IsFolder)
+        {
+            return ""; // Return empty string if the node is not yet loaded
+        }
+        else if (TreeNode.IsFolder)
+        {
+            if (TreeNode.Nodes.Count == 0)
+            {
+                return ""; // Return empty string if there are no child nodes
+            }
+            else
+            {
+                return _isExpanded ? "-" : "+"; // Return "-" if expanded, "+" if not expanded
+            }
+        }
+        return null; // Return null for non-folder nodes
+    }
+
+    private string GetFolderIconUrl()
+    {
+        if (TreeNode.IsFolder)
+        {
+            if (_isExpanded)
+            {
+                return "/images/img2.svg"; // URL for open folder icon
+            }
+            else
+            {
+                return "/images/img1.svg"; // URL for closed folder icon
+            }
+        }
+        else
+        {
+            return "/images/img3.svg"; // Return icon for non-folder nodes
+        }
+    }
+}
